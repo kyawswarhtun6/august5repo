@@ -52,7 +52,7 @@ font-family:'Poppins',sans-serif; */
   .navbar-toggler div{
     width: 30px;
     height: 4px;
-    margin: 5px 0;
+    margin: 2px 0;
     border-radius: 5px;
     background-color: var(--global-white-color);
     transition: var(--global-transition);
@@ -80,12 +80,25 @@ font-family:'Poppins',sans-serif; */
     display:flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     border-radius: 50%;
     border: 1px solid rgba(0,0,0,0.1);
     transition: var(--global-transition);
     perspective: 400;
   }
 
+  .content_icon_group .nav-link .search_btn{
+    background-color: var(--global-btn-color);
+    color: var(--global-white-color);
+  }
+  .content_icon_group .nav-link.search_btn{
+    background-color: var(--global-btn-color);
+    color: var(--global-white-color);
+  }
+
+  .content_icon_group .nav-link.search_btn:hover{
+    color: var(--global-black-color);
+  }
   .content_icon_group .nav-link:hover{
     color: var(--global-btn-color);
   }
@@ -100,7 +113,7 @@ font-family:'Poppins',sans-serif; */
 
   @media(max-width:992px){
     .nav_btn_list_group{
-      width: 100px;
+      width: 100%;
       padding: 20px;
       background-color: #4c4c4c;
       position: absolute;
@@ -120,4 +133,262 @@ font-family:'Poppins',sans-serif; */
 
   
   /* end nav bar */
+
+  /* start banner corusel */
+
+  .banner_content{
+    padding: 190px 0px;
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+  }
+
+  .banner_content_header h1{
+    color: var(--global-white-color);
+    font-size: 80px;
+    font-family: var(--global-cinzel-font);
+    font-weight: 900;
+  }
+  /* end banner corusel */
+
   /* end header */
+
+
+  /* start global btn */
+
+  .global_btn{
+    display: inline-block;
+    background-color: #140C40;
+    padding: 16px 37px;
+    background-color: var(--global-btn-color);
+    border-radius: 8px;
+
+    text-decoration: none;
+    color: var(--global-white-color);
+    font-weight: 700;
+
+    opacity: 0.85;
+    transform: var(--global-transition);
+  }
+
+  .global_btn:hover{
+    opacity: 1;
+  }
+  /* end global btn */
+
+  /* start show case section */
+
+  .showcase_content_container{
+    width: 100%;
+    height: 380px;
+    /* background-image: url("./../assets/imgs/products/popular1.png.webp"); */
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .showcase_title{
+    width: 100%;
+    padding: 19px 0px;
+    background-color: rgba(0,0,0,0.2);
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .showcase_title h3{
+    color: var(--global-white-color);
+    font-size: 40px;
+    font-family: var(--global-cinzel-font);
+
+  }
+
+  .showcase_content_container .global_btn{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: var(--global-transition);
+
+  }
+
+
+  .showcase_content_container:hover .showcase_title{
+    transform: translateY(0%);
+  }
+
+  .showcase_content_container:hover .global_btn{
+    top: 50%;
+    opacity: 1;
+  }
+    /* end show case section */
+
+
+  /* start global title */
+  .global_title_container h1{
+    color: var(--global-text-color);
+    font-family: var(--global-cinzel-font);
+    font-size: 65px;
+    font-weight: 800;
+  }
+
+  .global_title_para{
+    line-height: 1.5;
+  }
+
+  /* end global title */
+
+  
+  /* start new arrival section */
+  .product_main_container{
+    margin-bottom: 90px;
+    position: relative;
+  }
+
+  .product_img{
+    transition: var(--global-transition);
+  }
+  .product_img:hover{
+    box-shadow:2px 2px 20px rgba(0,0,0,0.2);
+  }
+
+
+  .product_name_group{
+    width: 100%;
+    position: absolute;
+    display: none;
+  }
+
+  .product_name_group.active{
+    display: block;
+    
+  }
+  
+  .product_name_group h4{
+    color: var(--global-text-color);
+    font-size: 23px;
+  }
+
+
+  .product_edit_btn{
+    color: #dfdddd;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+  }
+
+  .product_edit_btn.active{
+    color: var(--global-btn-color);
+  }
+
+
+  .product_edit_form{
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    display: none;
+  }
+
+  .product_edit_form.active{
+    display: block;
+  }
+
+  /* end new arrival section */
+
+  /* start about section */
+.about_title_container{
+  padding: 180px 0px;
+  background-image: url(./../assets/imgs/backgrounds/section_bg01.png.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.about_title {
+  padding-bottom: 55px;
+  color: var(--global-white-color);
+  font-family: var(--global-cinzel-font);
+  font-size: 50px;
+}
+  /* end about section */
+
+
+  /* start establish ssection */
+  .established_content_container{
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    transition: var(--global-transition)
+  }
+
+  .establish_content h2{
+    color: var(--global-white-color);
+    font-size: 35px;
+    font-family: 600;
+  }
+
+
+  .established_content_container:hover{
+    background-size: 120%;
+  }
+
+  /* end establish ssection */
+
+  
+  /* start service section */
+
+  .service_title{
+    color: var(--global-text-color);
+    font-size: 20px;
+  }
+
+  .service_section{
+    background-color: #f4f4f4;
+  }
+
+    /* end service section */
+
+    /* start contact section */
+
+    .form_title{
+      color: var(--global-text-color);
+      font-family: var(--global-cinzel-font);
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .contact_form .form-control {
+      padding: 15px 23px;
+      border: 1px solid #e6e6e6;
+    }
+
+    .contact_form .form-control::placeholder{
+      color: #aaa;
+      font-family: var(--global-poppin-font);
+      font-size: 15px;
+    }
+
+    .contact_form button{
+      color: var(--global-btn-color);
+      letter-spacing: 2px;
+      border: 1px solid var(--global-btn-color);
+    }
+
+  .contact_form button:hover{
+    color: var(--global-white-color);
+    background-color: var(--global-btn-color);
+    border: 1px solid var(--global-btn-color);
+
+  }
+
+   /* end contact section */
