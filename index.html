@@ -26,6 +26,18 @@
     <body>
         <!-- start header -->
         <header>
+            <div id="preloader">
+                <div class="dot-spinner">
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                    <div class="dot-spinner__dot"></div>
+                </div>
+            </div>
             <nav class="py-3 navbar navbar-expand-lg ">
                 <div class="container-fluid">
                     <div class="w-100 d-flex justify-content-between align-items-center"> 
@@ -49,31 +61,41 @@
                                 <div id="mynav" class="navbar-collapse  ">
                                     <ul class="navbar-nav text-uppercase fw-semibold">
                                         <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                                        <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
-                                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                                        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-                                        <li class="nav-item"><a href="#" class="nav-link">Content</a></li>
+                                        <li class="nav-item"><a href="#shop" class="nav-link">Shop</a></li>
+                                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                                        <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                                        <li class="nav-item"><a href="#contact " class="nav-link">Contact</a></li>
     
                                     </ul>
                                 </div>
                             </div>
                            
                         </div>
+
                         <div class="nav_right_side">
                             <ul class="p-0 m-0 list-unstyled d-flex content_icon_group">
                                 <li class="px-2"><a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a></li>
                                 <li class="px-2"><a href="#" class="nav-link"><i class="fab fa-twitter"></i></a></li>
                                 <li class="px-2"><a href="#" class="nav-link"><i class="fab fa-youtube"></i></a></li>
-                                <li class="px-2"><a href="#" class="nav-link search_btn"><i class="fas fa-search"></i></a></li>
+                                <li class="px-2"><a href="javascript:void(0)" class="nav-link search_btn"><i class="fas fa-search"></i></a></li>
                                 <li class="px-2">
                                     <a href="#" class="nav-link">
                                         <img src="./assets/imgs/avators/agent-2.jpg" class="rounded-circle" width="100%" height="100%" alt="user">
                                     </a>
                                 </li>
-
                             </ul>
                         </div>
-
+                        <!--start modal area  --> 
+                        <div id="search_modal" class="search_modal">
+                            <div class="modal_content_container">
+                                <div class="form-group">
+                                    <input type="text" id="search_modal" name="search_modal" class="form-control shadow-none outline-none" placeholder="Search Item">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end modal area  -->                                                                    
+                                                             
                     </div>
                 </div>
             </nav>
@@ -223,9 +245,8 @@
             </section>
             <!-- end show case menu section -->
 
-            <!-- staart new arrival section -->
-
-            <section>
+            <!-- start new arrival section -->
+            <section id="shop">
                 <div class="container">
                     <!-- start global title -->
                     <div class="global_title_container">
@@ -499,7 +520,7 @@
             <!-- end new arrival section -->
 
             <!-- start about section -->
-            <section>  
+            <section id="about">  
                 <div class="container-fluid">
                     <div class="about_title_container">
                         <div class="row justify-content-center">
@@ -525,7 +546,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-6 col-md-12">
-                            <div class="established_content_container d-flex justify-content-start align-items-end p-3" style="background-image: url(./assets/imgs/backgrounds/popular-imtes1.png.webp);">
+                            <div class="l_f established_content_container d-flex justify-content-start align-items-end p-3" style="background-image: url(./assets/imgs/backgrounds/popular-imtes1.png.webp);">
                                 <div class="establish_content">
                                     <h2>Established facts that by the readable content</h2>
                                      
@@ -539,7 +560,7 @@
                         </div>
 
                         <div class="col-lg-6 col-md-12">
-                            <div class="established_content_container d-flex justify-content-start align-items-end p-3 " style="background-image: url(./assets/imgs/backgrounds/popular-imtes2.png.webp);">
+                            <div class="r_t established_content_container d-flex justify-content-start align-items-end p-3 " style="background-image: url(./assets/imgs/backgrounds/popular-imtes2.png.webp);">
                                 <div class="establish_content">
                                     <h2>Established facts that by the readable content</h2>
                                      
@@ -614,7 +635,7 @@
             <!-- end service section -->
 
             <!-- start our story section -->
-            <section class="py-5">
+            <section id="blog" class="py-5 our_story_section">
                 <div class="container">
                     <!-- start global title -->
                     <div class="global_title_container">
@@ -654,7 +675,7 @@
             <!-- end google map section -->
 
             <!-- start contact section -->
-            <section>
+            <section id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-12 ">
@@ -684,13 +705,170 @@
                         </form>
                     </div>
                     <div class="col-lg-4 col-md-12">
+                        <div class="contact_address_container">
+                            <div class="mb-4 d-flex justify-content-start align-items-center contact_address">
+                                <span class="d-block me-3"><i class="fas fa-home"></i> </span>
+                                <div >
+                                    <h4 class="mb-0">Nay Pyi Taw</h4>
+                                    <span>Yezin,FRI road</span>
+                                </div>
+                            </div>
 
+                            <div class="mb-4 d-flex justify-content-start align-items-center contact_address">
+                                <span class="d-block me-3"><i class="fas fa-phone"></i> </span>
+                                <div >
+                                    <h4 class="mb-0">09 123455666</h4>
+                                    <span>Yezin,FRI road</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 d-flex justify-content-start align-items-center contact_address">
+                                <span class="d-block me-3"><i class="fas fa-envelope"></i> </span>
+                                <div >
+                                    <h4 class="mb-0">akatsuki@gmail.com</h4>
+                                    <span>Yezin,FRI road</span>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                        <div class="mb-3 log_out_container">
+                            <div class="d-grid">
+                                <a href="#" class="py-3 btn global_sub_btn rounded-0">Log out</a>
+                            </div>
+                        </div>
+                        <div class="log_in_container">
+                            <div class="login_in_container">
+                                <form action="" method="POST">
+                                    <h3 class="form_title">Login In</h3>
+                                    <div class="mb-4 form-group">
+                                        <input type="email" name="email" id="email" class="form-control rounded-0 outline-none shadow-none" placeholder="Enter your email">
+                                    </div>
+
+                                    <div class="mb-4 form-group">
+                                        <input type="password" name="password" id="password" class="form-control rounded-0 outline-none shadow-none" placeholder="Enter your password">
+                                    </div>
+
+                                    <div class="mb-4 d-grid">
+                                        <button type="submit" class="py-3 btn global_sub_btn rounded-0 text-uppercase">Submit</button>
+                                    </div>
+                                </form>
+
+                                <div class="alert alert-danger">Incorrect password</div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
             </div>
             </section>
             <!-- end contact section -->
+
+            <!-- start footer section -->
+            <footer>
+                <div class="container-fluid">
+                    <div class="elfsight-app-532f703b-e187-4d68-bb14-d0621a405d4d"></div>
+
+                    <div class="p-3 py-5 footer_container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                              <div class="footer_content_container">
+                                <div class="mb-4 footer_header">
+                                    <div class="footer_logo_img">
+                                        <img src="./assets/imgs/logos/logo2_footer.png.webp" width="170px" alt="footer logo" >
+                                    </div>
+                                </div>
+                                <div class="mb-5 footer_body">
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis autem aspernatur, fugit assumenda ipsa aliquam a modi vero dolor itaque beatae error magnam quidem quod obcaecati ab ratione. 
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa totam quae modi a quibusdam architecto vitae quam, unde nihil pariatur maxime cupiditate optio ullam accusamus? Adipisci quasi necessitatibus odio tenetur.
+                                    </p>
+                                </div>
+
+                                <div class="footer_foot">
+                                    <ul class="list-unstyled d-flex ">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-8 col-md-12">
+                                
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+                                            <div class="footer_content_container">
+                                                <div class="mb-4 footer_header">
+                                                    <h4>Quick link</h4>
+                                                </div>
+                                                <div class="mb-5 footer_body">
+                                                    <ul class="list-unstyled">
+                                                        <li class="mb-3"><a href="#">Image Licince</a></li>
+                                                        <li class="mb-3"><a href="#">Style Guide</a></li>
+                                                        <li class="mb-3"><a href="#">Privacy Policy</a></li>
+
+                                                    </ul>
+                                                </div>
+                                                      
+                                              </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+                                            <div class="footer_content_container">
+                                                <div class="mb-4 footer_header">
+                                                    <h4>Shop Category</h4>
+                                                </div>
+                                                <div class="mb-5 footer_body">
+                                                    <ul class="list-unstyled">
+                                                        <li class="mb-3"><a href="#">Image Licince</a></li>
+                                                        <li class="mb-3"><a href="#">Style Guide</a></li>
+                                                        <li class="mb-3"><a href="#">Privacy Policy</a></li>
+                                                    </ul>
+                                                </div>                                           
+                                              </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+                                            <div class="footer_content_container">
+                                                <div class="mb-4 footer_header">
+                                                    <h4>Pertaner</h4>
+                                                </div>
+                                                <div class="mb-5 footer_body">
+                                                    <ul class="list-unstyled">
+                                                        <li class="mb-3"><a href="#">Image Licince</a></li>
+                                                        <li class="mb-3"><a href="#">Style Guide</a></li>
+                                                        <li class="mb-3"><a href="#">Privacy Policy</a></li>
+                                                    </ul>
+                                                </div>                                                     
+                                              </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+                                            <div class="footer_content_container">
+                                                <div class="mb-4 footer_header">
+                                                    <h4>Get in Touch</h4>
+                                                </div>
+                                                <div class="mb-5 footer_body">
+                                                    <ul class="list-unstyled">
+                                                        <li class="mb-3"><a href="#">Image Licince</a></li>
+                                                        <li class="mb-3"><a href="#">Style Guide</a></li>
+                                                        <li class="mb-3"><a href="#">Privacy Policy</a></li>
+                                                    </ul>
+                                                </div>                                                     
+                                              </div>
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer section -->
+
+
+
 
         <!-- bootstrap css1 js 1-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
@@ -701,6 +879,9 @@
 
         <!-- owlcarousel css2 js 1 -->
         <script src="./assets/libs/OwlCarousel2-2.3.4/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+        <!-- elfsight viber -->
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 
         <script src="./javascript/app.js">     </script>
 
